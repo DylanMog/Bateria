@@ -3,17 +3,21 @@
 
 window.addEventListener("batterystatus", onBatteryStatus, false);
 
+
+
 function onBatteryStatus(info) {
     // Handle the online event
 	// Este evento se dispara cuando un porcentaje de la bateria cambia en al menos 1% o si uno desconecta o conecta el celular a cargar
 	
 	var element = document.getElementById('estadobateria');
-	element.innerHTML = 'Porcentaje de bateria: '+ info.level + "%" + "se esta cargando: " + info.isPlugged + '<br />';
+	element.innerHTML = 'Porcentaje de bateria: '+ info.level + "%" + " se esta cargando: " + info.isPlugged + '<br />';
 
 	if (info.isPlugged == false){
-		document.body.style.background = red;
+		 var status = document.getElementById("status");
+  		  status.style.backgroundColor = "#F00";
 	}else{
-		document.body.style.background = green;	
+		  var status = document.getElementById("status");
+  		  status.style.backgroundColor = "#0F0";
 	}
 
     //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
