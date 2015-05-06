@@ -1,45 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>GEO</title>
+<head>
+<meta charset="utf-8">
+<title>Bateria</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" 
+				type="text/css"
+				href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="cordova.js"
+				type="text/javascript">
+		</script>
+        
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"
+					type="text/javascript">
+			</script>
+			
+			<script  src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"
+					type="text/javascript">
+			</script>
+			<script src="js/script.js" 
+					type="text/javascript">
+			</script>
+            
+</head>
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+<body>
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
+<p id="estadobateria">Estado bateria: Detectando estado de bateria...</p>
 
-    // onSuccess Geolocation
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitud: '           + position.coords.latitude              + '<br />' +
-                            'Longitud: '          + position.coords.longitude             + '<br />' +
-                            'Altitud: '           + position.coords.altitude              + '<br />' +
-                            'Precisión: '           + position.coords.accuracy              + '<br />' +
-                            'Precisión en Altitud: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Rumbo: '            + position.coords.heading               + '<br />' +
-                            'Velocidad: '              + position.coords.speed                 + '<br />' +
-                            'Fecha y hora: '          + position.timestamp                    + '<br />';
-    }
+<p id="bateriacritica">Bateria critica: Detectando estado de bateria...</p>
 
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('codigo de error: '    + error.code    + '\n' +
-              'mensaje: ' + error.message + '\n');
-    }
+<p id="bateriabaja">Bateria baja: Detectando estado de bateria...</p>
 
-    </script>
-  </head>
-  <body>
-    <p id="geolocation">Buscando ubicación...</p>
-  </body>
+</body>
 </html>
