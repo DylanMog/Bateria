@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.brujula" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Bateria</name>
+    <name>Bateria Status</name>
     <description>
-        Bateria
+        Aplicacion para detectar estado de bateria
     </description>
     <author email="dyluu.m@gmail.com" href="dylan.com">
        	Dylan Moguilevsky
